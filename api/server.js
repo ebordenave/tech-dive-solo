@@ -2,6 +2,7 @@ require('dotenv').config()
 
 const express = require('express')
 const mongoose = require('mongoose')
+mongoose.set('strictQuery', false)
 const examRoutes = require('./routes/exams')
 
 //express app
