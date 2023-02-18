@@ -22,7 +22,7 @@ router.delete('/:id', (req, res) => {
     res.json({mssg: 'DELETE an exam'});
 });
 
-/* UPDATE a exam */
+/* UPDATE an exam */
 router.patch('/:id', (req, res) => {
     res.json({mssg: 'UPDATE an exam'});
 });
