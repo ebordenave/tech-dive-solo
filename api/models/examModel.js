@@ -1,4 +1,6 @@
 const mongoose = require('mongoose');
+mongoose.set("strictQuery",false);
+
 
 const Schema = mongoose.Schema;
 
@@ -12,7 +14,7 @@ const examSchema = new Schema({
         required: true,
     },
     brixiaScores: {
-        type: Number,
+        type: String,
         required:true,
     },
     imageURL: {

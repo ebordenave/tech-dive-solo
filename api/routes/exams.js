@@ -1,41 +1,30 @@
 const express = require('express');
-const Exam = require('../models/examModel');
-
+const {
+    createExam,
+    getAllExams,
+    getExam,
+    deleteExam,
+    updateExam
+} = require('../controllers/exam-controller')
 
 const router = express.Router();
 
 
 /* GET all exams */
-router.get('/', (req, res) => {
-    res.json({mssg: 'GET all exams'});
-});
+router.get('/', getAllExams);
 
 /* GET a single exam */
-router.get('/:id', (req, res) => {
-    res.json({mssg: 'GET a single exam'});
-});
+router.get('/:id', getExam);
 
 /* POST a new exam */
-router.post('/', async(req, res) => {
-    const {examId, keyFindings, brixiaScores, imageURL} = req.body;
-
-    try {
-        const exam = await Exam.create({examId, keyFindings, brixiaScores, imageURL})
-        res.status(200).json(exam);
-    }   catch (error) {
-        res.status(400).json({error: error.message});
-    }
-});
+router.post('/', createExam);
     
-
 /* DELETE an exam */
-router.delete('/:id', (req, res) => {
-    res.json({mssg: 'DELETE an exam'});
-});
+router.delete('/:id', deleteExam);
 
 /* UPDATE an exam */
-router.patch('/:id', (req, res) => {
-    res.json({mssg: 'UPDATE an exam'});
-});
+router.patch('/:id', updateExam);
+
+
 
 module.exports = router;
