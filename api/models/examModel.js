@@ -16,7 +16,7 @@ const examSchema = new Schema({
         required:true,
     },
     imageURL: {
-        type: Image,
+        type: String,
         required: true,
     }
 }, { timestamps: true });
