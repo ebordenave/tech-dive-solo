@@ -5,10 +5,10 @@ const mongoose = require('mongoose')
 mongoose.set('strictQuery', false)
 const examRoutes = require('./routes/exams')
 
-//express app
+/* express app */
 const app = express()
 
-// middleware
+/*  middleware */
 app.use(express.json())
 
 app.use((req, res, next) => {
@@ -16,13 +16,13 @@ app.use((req, res, next) => {
     next()
 })
 
-//routes
+/* routes */
 app.use('/api/exams', examRoutes)
 
-/* connect to db */
+/*  connect to db */
 mongoose.connect(process.env.MONGODB_URI)
 .then(() => {
-    /* listen for requests */
+    /*  listen for requests */
     app.listen(process.env.PORT, () => {
         console.log('connected to db & listening on port', process.env.PORT)
     })
