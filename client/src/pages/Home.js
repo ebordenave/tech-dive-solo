@@ -4,7 +4,6 @@ import ExamsTable from "../components/ExamsTable";
 const Home = () => {
     return (
         <div className="home">
-            {/* <ExamsTable /> */}
         </div>
     )
 }

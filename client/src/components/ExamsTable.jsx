@@ -87,7 +87,6 @@ function ExamsTable() {
 
   return (
     <div style={{ maxWidth: '75%', margin: 'auto'}}>
-      <h1>Exam Data</h1>
       <MaterialReactTable columns={columns} data={data} />
     </div>
   );

@@ -7,6 +7,7 @@ import { useApi } from './hooks/use-api';
 // pages & components
 import Home from './pages/Home';
 import Exams from './pages/Exams';
+import Admin from '.pages/admin';
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
           <Routes>
             <Route exact path="/" element={<Home />} />
             <Route path="/exams" element={<Exams />} />
+            <Route path="/admin" element={<Admin />} />
 
 
                 </Routes>
