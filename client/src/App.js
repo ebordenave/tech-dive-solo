@@ -20,9 +20,8 @@ function App() {
             path="/" 
             element={<Home />} />
 
-          </Routes>
-        
-        </div>
+                </Routes>
+            </div>
       </BrowserRouter>
     </div>
   );

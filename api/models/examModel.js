@@ -8,6 +8,7 @@ const examSchema = new Schema({
     examId: {
         type: String,
         required: true,
+        unique: true
     },
     keyFindings: {
         type: String,
@@ -20,6 +21,7 @@ const examSchema = new Schema({
     imageURL: {
         type: String,
         required: true,
+        unique: true
     }
 }, { timestamps: true });
 
