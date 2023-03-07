@@ -1,9 +1,12 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { useApi } from './hooks/use-api';
+
 
 
 // pages & components
 import Home from './pages/Home';
+import Exams from './pages/Exams';
 
 
 function App() {
@@ -11,16 +14,16 @@ function App() {
 
   return (
     <div className="App">
-      <BrowserRouter>
+      <Router>
         <div className="pages">
           <Routes>
-            <Route 
-            path="/" 
-            element={<Home />} />
+            <Route exact path="/" element={<Home />} />
+            <Route path="/exams" element={<Exams />} />
+
 
                 </Routes>
             </div>
-      </BrowserRouter>
+      </Router>
     </div>
   );
 }
