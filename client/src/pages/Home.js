@@ -1,7 +1,11 @@
+import ExamsTable from "../components/ExamsTable"
+import ResponsiveAppBar from "../components/AppBar"
+
 const Home = () => {
     return (
         <div className="home">
-            <h2>Home</h2>
+            <ResponsiveAppBar />
+            <ExamsTable />
         </div>
     )
 }

@@ -1,11 +1,11 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-
 import { useApi } from './hooks/use-api';
 
 
 // pages & components
 import Home from './pages/Home';
-import Navbar from './components/Navbar';
+import { AppBar } from '@mui/material';
+import ExamsTable from './components/ExamsTable';
 
 
 function App() {
@@ -14,7 +14,6 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-      <Navbar />
         <div className="pages">
           <Routes>
             <Route 
