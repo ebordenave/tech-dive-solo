@@ -33,7 +33,11 @@ function ExamsTable() {
         accessorKey: 'examId',
         header: 'Exam ID',
         width: 20,
-        Cell: ({ cell: { value }, row: { original } }) => <Link to={`users/${original.id}`}>{value}</Link>
+        render: rowData => (
+          <Link to={`/exams/${rowData.examId}`}>
+            {rowData.examId}
+          </Link>
+        )
       },
       {
         accessorKey: 'imageURL',
@@ -41,8 +45,9 @@ function ExamsTable() {
         width: 20,
         render : rowData => (
           <img
-            src={rowData.imageUrl}
+            src={rowData.imageURL}
             style={{ width: 50, height: 50 }}
+            alt="xray"
           />
         )
       },

@@ -4,8 +4,6 @@ import { useApi } from './hooks/use-api';
 
 // pages & components
 import Home from './pages/Home';
-import { AppBar } from '@mui/material';
-import ExamsTable from './components/ExamsTable';
 
 
 function App() {
