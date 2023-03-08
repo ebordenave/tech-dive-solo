@@ -1,15 +1,19 @@
 import AppBar from '../components/AppBar'
 import React from 'react';
-import Admin from '../components/Admin'
+import ExamsTable from '../components/ExamsTable';
+import { Button } from '@mui/material'
 
 
 
 
 const Admin = () => {
   return (
-    <div className="Admin" >
+    <div className="admin" >
       <AppBar />
-        <Admin />
+      <br></br>
+      <Button variant="contained">Create Exam</Button>
+      <h2>admin page here</h2>
+        <ExamsTable />
     </div>
   )
 }
