@@ -3,6 +3,10 @@ import React from 'react';
 import ExamsTable from '../components/ExamsTable';
 import { Button } from '@mui/material'
 
+import { Link } from 'react-router-dom';
+
+const pages = ['create'];
+
 
 
 
@@ -11,8 +15,12 @@ const Admin = () => {
     <div className="admin" >
       <AppBar />
       <br></br>
-      <Button variant="contained">Create Exam</Button>
-      <h2>admin page here</h2>
+      <div style={{ display: 'flex', justifyContent: 'center' }}>
+      {pages.map((page) => (
+      <Button variant="contained" key={page} component={ Link } to={`/${page.toLowerCase()}`} >Create Exam</Button>
+      ))}
+      </div>
+      <p></p>
         <ExamsTable />
     </div>
   )

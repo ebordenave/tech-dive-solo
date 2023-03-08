@@ -1,5 +1,5 @@
 import React from "react";
-import ExamsTable from "../components/ExamsTable";
+
 
 const Home = () => {
     return (
