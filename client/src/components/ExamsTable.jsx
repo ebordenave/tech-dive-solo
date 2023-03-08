@@ -43,12 +43,12 @@ function ExamsTable() {
         accessorKey: 'imageURL',
         header: 'Image',
         width: 20,
-        render : rowData => (
+        render : item => (
           <img
-            src={rowData.imageURL}
-            style={{ width: 50, height: 50 }}
-            alt="xray"
+            src={item.imageURL}
+            alt=""
           />
+          // render: item => <img src={item.img} alt="" border="3" height="100" width="100" />
         )
       },
       {

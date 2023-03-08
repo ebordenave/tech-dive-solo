@@ -9,6 +9,8 @@ const Exams = () => {
   return (
     <div className="exams" >
       <AppBar />
+      <br></br>
+      <h2>Exams Page Here</h2>
         <ExamsTable />
     </div>
   )

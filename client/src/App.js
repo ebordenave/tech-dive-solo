@@ -1,16 +1,21 @@
 import React from 'react';
+import { userState } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { useApi } from './hooks/use-api';
+import { useTheme, createTheme, ThemeProvider } from '@mui/material/styles';
+
 
 
 
 // pages & components
 import Home from './pages/Home';
 import Exams from './pages/Exams';
-import Admin from '.pages/admin';
+import Admin from './pages/Admin';
 
 
 function App() {
+
+
   const { response } = useApi();
 
   return (
