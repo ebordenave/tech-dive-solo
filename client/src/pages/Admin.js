@@ -1,6 +1,6 @@
 import AppBar from '../components/AppBar'
 import React from 'react';
-import ExamsTable from '../components/ExamsTable';
+import AdminTable from '../components/AdminTable';
 import { Button } from '@mui/material'
 
 import { Link } from 'react-router-dom';
@@ -21,7 +21,7 @@ const Admin = () => {
       ))}
       </div>
       <p></p>
-        <ExamsTable />
+        <AdminTable />
     </div>
   )
 }
