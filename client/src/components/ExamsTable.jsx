@@ -43,12 +43,13 @@ function ExamsTable() {
         accessorKey: 'imageURL',
         header: 'Image',
         width: 20,
-        // Cell : tableProps => (
-        //   <img
-        //     src={tableProps.column.orginal.imageURL}
-        //     alt=""
-        //   />
-        // )
+        render : item => (
+          <img
+            src={item.imageURL}
+            alt=""
+          />
+          // render: item => <img src={item.img} alt="" border="3" height="100" width="100" />
+        )
       },
       {
         accessorKey: 'keyFindings',
